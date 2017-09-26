@@ -9,3 +9,6 @@ My name is Emily, and I am currently in the certificate program for Scientific a
 
 **What do I like to do?** <br>
 Roller derby, Vintage animation and illustration, Makeup artistry, Music, Baking, My cat
+
+**Let's Talk.**<br>
+You can [email me](mailto:gresb008@umn.edu) or find me on [LinkedIn](https://www.linkedin.com/in/emilygresbrink). 
