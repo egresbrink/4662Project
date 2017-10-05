@@ -15,7 +15,6 @@ h2 {
   padding: 100px;
 }
 
-<style>
 ul {
     list-style-type: none;
     margin: 0;
@@ -45,4 +44,3 @@ li a.active {
     color: white;
     background-color: #4CAF50;
 }
-</style>
