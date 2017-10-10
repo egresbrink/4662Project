@@ -42,14 +42,11 @@ h3 {
 }
 
 li a:hover:not(.active) {
-    background-color: #800080;
+  color: #FFFFFF;   
+  background-color: #800080;
 }
 
 li a.active {
     color: #FFFFFF;
     background-color: #800080;
-}
-
-.navbar .nav > li > a {
-  line-height: 100px;
 }
