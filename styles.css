@@ -49,3 +49,7 @@ li a.active {
     color: #FFFFFF;
     background-color: #800080;
 }
+
+.navbar .nav > li > a {
+  line-height: 100px;
+}
