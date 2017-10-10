@@ -42,18 +42,10 @@ h3 {
 }
 
 li a:hover:not(.active) {
-    background-color: #ddd;
+    background-color: #800080;
 }
 
 li a.active {
     color: white;
     background-color: #4CAF50;
-}
-
-iframe:focus { 
-    outline: none;
-}
-
-iframe[seamless] { 
-    display: block;
 }
