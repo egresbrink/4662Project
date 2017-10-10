@@ -26,5 +26,63 @@ $(document).ready(function(){
  
 });
 </script>
+ 
+ <?
+session_start();
+ 
+function loginForm(){
+    echo'
+    <div id="loginform">
+    <form action="index.php" method="post">
+        <p>Please enter your name to continue:</p>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" name="enter" id="enter" value="Enter" />
+    </form>
+    </div>
+    ';
+}
+ 
+if(isset($_POST['enter'])){
+    if($_POST['name'] != ""){
+        $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
+    }
+    else{
+        echo '<span class="error">Please type in a name</span>';
+    }
+}
+?>
+ 
+ <p class="welcome">Welcome, <b><?php echo $_SESSION['name']; ?></b></p>
+ 
+ <script type="text/javascript">
+// jQuery Document
+$(document).ready(function(){
+	//If user wants to end session
+	$("#exit").click(function(){
+		var exit = confirm("Are you sure you want to end the session?");
+		if(exit==true){window.location = 'index.php?logout=true';}		
+	});
+});
+</script>
+ 
+ if(isset($_GET['logout'])){ 
+     
+    //Simple exit message
+    $fp = fopen("log.html", 'a');
+    fwrite($fp, "<div class='msgln'><i>User ". $_SESSION['name'] ." has left the chat session.</i><br></div>");
+    fclose($fp);
+     
+    session_destroy();
+    header("Location: index.php"); //Redirect the user
+}
+ //If user submits the form
+	$("#submitmsg").click(function(){	
+		var clientmsg = $("#usermsg").val();
+		$.post("post.php", {text: clientmsg});				
+		$("#usermsg").attr("value", "");
+		return false;
+	});
+ 
 </body>
 </html>
